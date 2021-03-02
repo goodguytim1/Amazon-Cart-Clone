@@ -1,16 +1,16 @@
 import logo from './logo.svg';
-import Header from './Header.js'
+import CartItems from './components/CartItems.js'
+import Header from './components/Header.js'
 import './App.css';
+import CartTotal from './components/CartTotal';
 
 function App() {
   return (
     <div className="App">
       <Header title="Amazon Cart"/>
       <div className="App-main">
-        <div className="CartItems">
-          <h1>Shopping Cart</h1>
-        </div>
-        <div className="CartTotal"></div>
+        <CartItems />
+        <CartTotal />
       </div>
     </div>
   );
