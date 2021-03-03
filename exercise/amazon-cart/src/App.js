@@ -8,12 +8,12 @@ import React, { useState } from 'react';
 function App() {
 
   const [cartItems, setCartItems] = useState(data);
-
+  console.log(cartItems);
   return (
     <div className="App">
       <Header title="Amazon Cart"/>
       <div className="App-main">
-        <CartItems item={cartItems}/>
+        <CartItems items={cartItems}/>
         <CartTotal />
       </div>
     </div>
