@@ -18,6 +18,14 @@ function CartItems({ items, setCartItems }) {
     setCartItems(newItems);
   }
 
+  const deleteItems = (indexToDelete) => {
+    // filter out the items where the item does not equal to the selected item index
+    const newItems = items.filter((value, index) => {
+      return index !== indexToDelete;
+    });
+    setCartItems(newItems);
+  }
+
     return (
         <div className="CartItems">
           <h1>Shopping Cart</h1>
@@ -29,6 +37,7 @@ function CartItems({ items, setCartItems }) {
                 item={item}
                 key={index}
                 changeItemQuantity={changeItemQuantity}
+                deleteItems = {deleteItems}
               />
             )}
             {/* <CartItem /> */}
